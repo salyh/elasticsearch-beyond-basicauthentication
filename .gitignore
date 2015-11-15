@@ -1,0 +1,17 @@
+.DS_Store
+target/
+_elasticsearch/
+.vagrant/
+*.jks
+pki-scripts/ca/
+pki-scripts/certs/
+pki-scripts/crl/
+nohup*
+*.key
+*.pem
+*.crt
+*.req
+*.csr
+testlog
+*.p12
+*.html
