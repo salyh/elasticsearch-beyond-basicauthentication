@@ -1,5 +1,7 @@
 ##Demo for my "Elasticsearch: Beyond Basic Authentication" talk
 
+https://speakerdeck.com/salyh/elasticsearch-2-security-beyond-basic-authentication
+
 * vagrant up
 * vagrant ssh
 * cd /vagrant
