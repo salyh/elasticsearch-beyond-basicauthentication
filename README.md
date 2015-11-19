@@ -6,7 +6,7 @@
 * ./setup_mit_krb.sh
  * Realm: EXAMPLE:COM
  * Host: localhost
-* ./start_elasticsearch.sh &
+* nohup ./start_elasticsearch.sh &
 * ./kerb_request.sh
 
 Vagrant exposes the ports 9200 and 5601. Open firefox on your host system and type:
@@ -18,9 +18,9 @@ Access is denied. To get access via PKI authentication
 * import pki-scripts/client.p12 into firefox and try again
 * You should be authenticated as "Mister Spock"
 
-To get access via kerberos copy the /etc/krb5.conf from the vagrant box to your host system and
+To get access via kerberos copy the /etc/krb5.conf from the vagrant box to your host system (tested on OS X) and
 
-* In Firefox ass "localhost" to allowed URLs like described [here](https://ping.force.com/Support/PingFederate/Integrations/How-to-configure-supported-browsers-for-Kerberos-NTLM)
+* In Firefox add "localhost" to allowed URLs like described [here](https://ping.force.com/Support/PingFederate/Integrations/How-to-configure-supported-browsers-for-Kerberos-NTLM)
 * kinit luke@EXAMPLE.COM
 * Password is: lukepwd
 * Open https://localhost:9200/_logininfo?pretty
