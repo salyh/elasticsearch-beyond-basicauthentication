@@ -11,10 +11,10 @@ sudo apt-get -yqq install curl software-properties-common > /dev/null 2>&1
 sudo add-apt-repository -y ppa:webupd8team/java > /dev/null 2>&1
 sudo apt-get -yqq update > /dev/null 2>&1
 sudo apt-get -yqq install autoconf libtool libssl-dev libkrb5-dev python-dev python-pip haveged openssl wget git oracle-java8-installer oracle-java8-unlimited-jce-policy > /dev/null 2>&1
-sudo apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" krb5-user
+sudo apt-get install -q -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" krb5-user > /dev/null 2>&1
 #entropy generator
-haveged -w 1024
-sudo pip install httpie-negotiate
+haveged -w 1024 > /dev/null 2>&1
+sudo pip install httpie-negotiate > /dev/null 2>&1
 su -c "/vagrant/setup.sh" vagrant
 SCRIPT
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
